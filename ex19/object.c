@@ -49,7 +49,7 @@ void *Object_new(size_t size, Object proto, char *description)
 
     el->description = strdup(description);
 
-    if(!el->innit(el)){
+    if(!el->init(el)){
     
         el->destroy(el);
         return NULL;
